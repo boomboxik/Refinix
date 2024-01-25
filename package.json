@@ -1,5 +1,5 @@
 {
-  "name": "Refinix",
+  "name": "refinix",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -42,7 +42,8 @@
     "dev": "refine dev",
     "build": "tsc && refine build",
     "preview": "refine start",
-    "refine": "refine"
+    "refine": "refine",
+    "codegen": "graphql-codegen"
   },
   "browserslist": {
     "production": [

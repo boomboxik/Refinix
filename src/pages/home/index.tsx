@@ -1,3 +1,5 @@
+import { Col, Row } from "antd"
+
 export const Home = () => {
     return (
         <div>
@@ -12,7 +14,7 @@ export const Home = () => {
                     sm={24}
                     xl={8}
                     style={{
-                        heihgt: '460px'
+                        height: '460px'
                     }}
                 >
                     CalendarUpcomingEvents
@@ -22,7 +24,7 @@ export const Home = () => {
                     sm={24}
                     xl={8}
                     style={{
-                        heihgt: '460px'
+                        height: '460px'
                     }}
                 >
                     DashboardDealsChart

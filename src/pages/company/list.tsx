@@ -1,8 +1,9 @@
+import CustomAvatar from "@/components/custom-avatar"
 import { COMPANIES_LIST_QUERY } from "@/graphql/queries"
 import { SearchOutlined } from "@ant-design/icons"
 import { CreateButton, FilterDropdown, List, useTable } from "@refinedev/antd"
 import { getDefaultFilter, useGo } from "@refinedev/core"
-import { Input, Table } from "antd"
+import { Input, Space, Table } from "antd"
 
 export const CompanyList = () => {
     const go = useGo()
@@ -52,8 +53,12 @@ export const CompanyList = () => {
                             <Input placeholder ="Search Company"/>
                         </FilterDropdown>
                     )}
+                    render={(value, record) => (
+                        <Space>
+                            <CustomAvatar shape="square" name={record.name} src={record.avatarUrl} />
+                        </Space>
+                    )}
                 >
-                    
                 </Table.Column>
             </Table>
         </List>

@@ -4,6 +4,7 @@ import { useModalForm, useSelect } from "@refinedev/antd"
 import { useGo } from "@refinedev/core"
 import { CREATE_COMPANY_MUTATION } from "@/graphql/mutations"
 import { USERS_SELECT_QUERY } from "@/graphql/queries"
+import SelectOptionWithAvatar from "@/components/select-option-with-avatar"
 
 const Create = () => {
     const go = useGo()
@@ -28,7 +29,7 @@ const Create = () => {
         }
     })
 
-    const { selectProps, queryResults } = useSelect({
+    const { selectProps, queryResult } = useSelect({
         resource: 'users',
         optionLabel: 'name',
         meta: {
@@ -62,7 +63,7 @@ const Create = () => {
                             placeholder="Please select a sales owner"
                             {...selectProps}
                             options={
-                                queryResults.data?.data.map((user) => ({
+                                queryResult.data?.data.map((user) => ({
                                     values: user.id,
                                     label: (
                                         <SelectOptionWithAvatar

@@ -1,4 +1,5 @@
 import CustomAvatar from "./custom-avatar"
+import { Text } from "./text"
 
 type Props = {
     name: string,
@@ -16,6 +17,7 @@ const SelectOptionWithAvatar = ({ avatarUrl, name, shape}: Props) => {
             }}
         >
             <CustomAvatar shape={shape} name={name} src={avatarUrl} />
+            <Text>{name}</Text>
         </div>
     )
 }

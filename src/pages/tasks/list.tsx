@@ -9,6 +9,9 @@ const List = () => {
                     <KanbanColumn>
 
                     </KanbanColumn>
+                    <KanbanColumn>
+
+                    </KanbanColumn>
                 </KanbanBoard>
             </KanbanBoardContainer>
         </>

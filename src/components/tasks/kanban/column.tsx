@@ -10,6 +10,8 @@ const KanbanColumn = () => {
     })
 
     const count = 2
+    const description = 'Description'
+    const title = 'title'
 
     const onAddClickHandler = () => {
         
@@ -28,7 +30,7 @@ const KanbanColumn = () => {
                 <Space style={{ width: '100%', justifyContent: 'space-between' }}>
                     <Space>
                         <Text 
-                            ellipsis={{ tooltip: 'TITLE TO DO' }}
+                            ellipsis={{ tooltip: title }}
                             size="xs"
                             strong
                             style={{
@@ -36,7 +38,7 @@ const KanbanColumn = () => {
                                 whiteSpace: 'nowrap'
                             }}
                         >
-                            TITLE TO DO
+                            {title}
                         </Text>
                         {!!count && <Badge count={count} color="cyan" />}
                     </Space>
@@ -46,6 +48,7 @@ const KanbanColumn = () => {
                         onClick={onAddClickHandler}
                     />
                 </Space>
+                {description}
             </div>
         </div>
     )

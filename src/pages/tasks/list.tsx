@@ -1,5 +1,6 @@
 import { KanbanBoardContainer, KanbanBoard } from "@/components/tasks/kanban/board"
 import KanbanColumn from "@/components/tasks/kanban/column"
+import KanbanItem from "@/components/tasks/kanban/item"
 
 const List = () => {
     return (
@@ -7,7 +8,9 @@ const List = () => {
             <KanbanBoardContainer>
                 <KanbanBoard>
                     <KanbanColumn>
+                        <KanbanItem>
 
+                        </KanbanItem>
                     </KanbanColumn>
                     <KanbanColumn>
 

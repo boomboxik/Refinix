@@ -65,11 +65,20 @@ const List = () => {
         }
     }, [stages, tasks])
 
+    const handleAddCard = (args: { stageId: string }) => {
+
+    }
+
     return (
         <>
             <KanbanBoardContainer>
                 <KanbanBoard>
-                    <KanbanColumn>
+                    <KanbanColumn
+                        id="unnasigned"
+                        title={"unnasigned"}
+                        count={taskStages.unnasignedStage.length || 0}
+                        onAddClick={() => handleAddCard({ stageId: 'unnasigned' })}
+                    >
                         <KanbanItem>
                             This is to do
                         </KanbanItem>

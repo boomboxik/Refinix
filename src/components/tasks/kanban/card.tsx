@@ -1,9 +1,10 @@
+import CustomAvatar from "@/components/custom-avatar"
 import { Text } from "@/components/text"
 import { TextIcon } from "@/components/text-icon"
 import { User } from "@/graphql/schema.types"
 import { getDateColor } from "@/utilities"
 import { ClockCircleOutlined, DeleteOutlined, EyeOutlined, MoreOutlined } from "@ant-design/icons"
-import { Button, Card, ConfigProvider, Dropdown, MenuProps, Tag, theme } from "antd"
+import { Button, Card, ConfigProvider, Dropdown, MenuProps, Space, Tag, Tooltip, theme } from "antd"
 import dayjs from "dayjs"
 import { useMemo } from "react"
 
@@ -127,6 +128,15 @@ const ProjectCard = ({ id, title, dueDate, users }: ProjectCardPorps) => {
                         >
                             {dueDateOptions.text}
                         </Tag>
+                    )}
+                    {!!users?.length && (
+                        <Space>
+                            {users.map((user) => (
+                                <Tooltip key={user.id} title={user.name}>
+                                    <CustomAvatar name={user.name} src={user.avatarUrl} />
+                                </Tooltip>
+                            ))}
+                        </Space>
                     )}
                 </div>
             </Card>

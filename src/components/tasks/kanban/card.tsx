@@ -6,7 +6,7 @@ import { getDateColor } from "@/utilities"
 import { ClockCircleOutlined, DeleteOutlined, EyeOutlined, MoreOutlined } from "@ant-design/icons"
 import { Button, Card, ConfigProvider, Dropdown, MenuProps, Space, Tag, Tooltip, theme } from "antd"
 import dayjs from "dayjs"
-import { useMemo } from "react"
+import { memo, useMemo } from "react"
 
 type ProjectCardPorps = {
     id: string
@@ -130,10 +130,21 @@ const ProjectCard = ({ id, title, dueDate, users }: ProjectCardPorps) => {
                         </Tag>
                     )}
                     {!!users?.length && (
-                        <Space>
+                        <Space
+                            size={4}
+                            wrap
+                            direction="horizontal"
+                            align="center"
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'flex-end',
+                                marginLeft: 'auto',
+                                marginRight: 0
+                            }}
+                        >
                             {users.map((user) => (
                                 <Tooltip key={user.id} title={user.name}>
-                                    <CustomAvatar name={user.name} src={user.avatarUrl} />
+                                    <CustomAvatar name={user.name} src={user.avatar} />
                                 </Tooltip>
                             ))}
                         </Space>
@@ -145,3 +156,13 @@ const ProjectCard = ({ id, title, dueDate, users }: ProjectCardPorps) => {
 }
 
 export default ProjectCard
+
+export const ProjectCardMemo = memo(ProjectCard, (prev, next) => {
+    return (
+        prev.id === next.id &&
+        prev.title === next.title &&
+        prev.dueDate === next.dueDate &&
+        prev.users?.length === next.users?.length &&
+        prev.updatedAt === next.updatedAt
+    )
+})

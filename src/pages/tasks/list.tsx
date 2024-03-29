@@ -1,4 +1,4 @@
-import { KanbanColumnSkeleton } from "@/components"
+import { KanbanColumnSkeleton, ProjectCardSkeleton } from "@/components"
 import { KanbanAddCardButton } from "@/components/tasks/kanban/add-card-button"
 import { KanbanBoardContainer, KanbanBoard } from "@/components/tasks/kanban/board"
 import ProjectCard, { ProjectCardMemo } from "@/components/tasks/kanban/card"
@@ -131,7 +131,10 @@ const PageSkeleton = () => {
     return (
         <KanbanBoardContainer>
             {Array.from({ length: columnCount }).map((_, index) => (
-                <KanbanColumnSkeleton>
+                <KanbanColumnSkeleton key={index}>
+                    {Array.from({ length: itemCount }).map((_, index) => (
+                        <ProjectCardSkeleton key={index}/>
+                    ))}
                     
                 </KanbanColumnSkeleton>
             ))}

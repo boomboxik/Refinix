@@ -113,7 +113,14 @@ const List = () => {
                             count={column.tasks.length}
                             onAddClick={() => handleAddCard({ stageId: column.id })}
                         >
-
+                            {!isLoading && column.tasks.map((task) => (
+                                <KanbanItem key={task.id} id={task.id} data={task}>
+                                    <ProjectCardMemo
+                                        {...task}
+                                        dueDate={task.dueDate || undefined}
+                                    />
+                                </KanbanItem>
+                            ))}
                         </KanbanColumn>
                     ))}
                 </KanbanBoard>

@@ -7,6 +7,7 @@ import KanbanItem from "@/components/tasks/kanban/item"
 import { TASKS_QUERY, TASK_STAGES_QUERY } from "@/graphql/queries"
 import { TaskStage } from "@/graphql/schema.types"
 import { TasksQuery } from "@/graphql/types"
+import { DragEndEvent } from "@dnd-kit/core"
 import { useList } from "@refinedev/core"
 import { GetFieldsFromList } from "@refinedev/nestjs-query"
 import React from "react"
@@ -72,6 +73,18 @@ const List = ({ children }: React.PropsWithChildren) => {
     }, [stages, tasks])
 
     const handleAddCard = (args: { stageId: string }) => {}
+
+    const handleOnDragEnd = (event: DragEndEvent) => {
+        let stageId = event.over?.id as undefined | string | null
+        const taskId = event.active.id as string
+        const taskStageId = event.active.data.current?.stageId
+
+        if(taskStageId === stageId) return
+
+        if(stageId === 'unnasigned') {
+            stageId = null
+        }
+    }
 
     const isLoading = isLoadingStages || isLoadingTasks
 

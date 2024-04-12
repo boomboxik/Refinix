@@ -65,8 +65,13 @@ function App() {
                         <Route path="new" element={<Create />} />
                         <Route path="edit/:id" element={<EditPage />} />
                       </Route>
-                      <Route path="/tasks">
-                        <Route index element={<List />} />
+                      <Route path="/tasks" element={
+                        <List>
+                          <Outlet />
+                        </List>
+                      }>
+                      <Route path="new" element={<TasksCreatePage />} />
+                      <Route path="edit:/id" element={<TasksEditPage />} />
                       </Route>
                   </Route>
                 </Routes>
@@ -79,7 +84,7 @@ function App() {
           </AntdApp>
       </RefineKbarProvider>
     </BrowserRouter>
-  );
+  )
 }
 
 export default App;

@@ -30,11 +30,10 @@ const KanbanColumnSkeleton = ({ children }: React.PropsWithChildren) => {
               <MoreOutlined
                 style={{
                   transform: "rotate(90deg)",
-                }}
-              />
+                }} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
             }
           />
-          <Button disabled shape="circle" icon={<PlusOutlined />} />
+          <Button disabled shape="circle" icon={<PlusOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />} />
         </Space>
       </div>
       <div

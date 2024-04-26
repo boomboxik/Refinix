@@ -69,7 +69,7 @@ const DealsChart = () => {
                         gap: '8px'
                     }}
                 >
-                    <DollarOutlined/>
+                    <DollarOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}/>
                     <Text size='sm' style={{ marginLeft: '0.5rem' }}>
                         Deals
                     </Text>

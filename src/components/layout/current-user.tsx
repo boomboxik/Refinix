@@ -34,7 +34,7 @@ const CurrentUser = () => {
             >
                 <Button
                     style={{ textAlign: 'left' }}
-                    icon={<SettingOutlined/>}
+                    icon={<SettingOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}/>}
                     type="text"
                     block
                     onClick={() => setIsOpen(true)}

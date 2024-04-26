@@ -75,7 +75,7 @@ export const StageForm = ({ isLoading }: Props) => {
         {...formProps}
       >
         <Space size={5}>
-          <FlagOutlined />
+          <FlagOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
           <Form.Item
             noStyle
             name={["stageId"]}

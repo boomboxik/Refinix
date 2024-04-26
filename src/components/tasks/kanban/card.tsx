@@ -32,7 +32,7 @@ const ProjectCard = ({ id, title, dueDate, users }: ProjectCardPorps) => {
             {
                 label: 'View card',
                 key: '1',
-                icon: <EyeOutlined/>,
+                icon: <EyeOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}/>,
                 onClick: () => {
                     edit('tasks', id, 'replace')
                 }
@@ -41,7 +41,7 @@ const ProjectCard = ({ id, title, dueDate, users }: ProjectCardPorps) => {
                 danger: true,
                 label: 'Delete card',
                 key: '2',
-                icon: <DeleteOutlined />,
+                icon: <DeleteOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />,
                 onClick: () => {
                     mutate({
                         resource: 'tasks',
@@ -107,8 +107,7 @@ const ProjectCard = ({ id, title, dueDate, users }: ProjectCardPorps) => {
                                 <MoreOutlined 
                                     style={{
                                         transform: 'rotate(90deg)'
-                                    }}
-                                />
+                                    }} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
                             }
                             onPointerDown={(e) => {
                                 e.stopPropagation()
@@ -132,7 +131,7 @@ const ProjectCard = ({ id, title, dueDate, users }: ProjectCardPorps) => {
                     {dueDateOptions && (
                         <Tag
                             icon={
-                                <ClockCircleOutlined style={{fontSize: '12px'}} />
+                                <ClockCircleOutlined style={{ fontSize: '12px' }} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
                             }
                             style={{
                                 padding: '0 4px',

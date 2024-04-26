@@ -160,6 +160,7 @@ export type Company = {
   updatedAt: Scalars["DateTime"]["output"];
   updatedBy?: Maybe<User>;
   website?: Maybe<Scalars["String"]["output"]>;
+  dataIndex?: any 
 };
 
 export type CompanyContactsArgs = {

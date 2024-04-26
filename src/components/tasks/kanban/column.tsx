@@ -54,7 +54,7 @@ const KanbanColumn = ({
                     </Space>
                     <Button 
                         shape="circle"
-                        icon={<PlusOutlined/>}
+                        icon={<PlusOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}/>}
                         onClick={onAddClickHandler}
                     />
                 </Space>

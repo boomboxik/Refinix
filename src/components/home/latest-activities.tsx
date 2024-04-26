@@ -42,7 +42,7 @@ const LatestActivities = () => {
             bodyStyle={{ padding: '0 1rem' }}
             title={(
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <UnorderedListOutlined/>
+                    <UnorderedListOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}/>
                     <Text size="sm" style={{ marginLeft: '0.5rem' }}>
                         Latest Activities
                     </Text>

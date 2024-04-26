@@ -114,7 +114,7 @@ const { tableProps } = useTable<GetFieldsFromList<CompanyContactsTableQuery>>(
                     </Text>
                     </Space>
                 )}
-                filterIcon={<SearchOutlined />}
+                filterIcon={<SearchOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />}
                 filterDropdown={(props) => (
                     <FilterDropdown {...props}>
                         <Input placeholder="Search Name" />

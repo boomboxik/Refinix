@@ -28,5 +28,5 @@ export const TextIconSvg = () => (
 )
 
 export const TextIcon = (props: Partial<CustomIconComponentProps>) => (
-    <Icon component={TextIconSvg} {...props} />
+    <Icon onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} component={TextIconSvg} {...props} />
 )

@@ -48,8 +48,7 @@ export const totalCountVariants: {
                         className="md"
                         style={{
                             color: "#1677FF",
-                        }}
-                    />
+                        }} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
                 </IconWrapper>
             ),
     title: "Number of companies",
@@ -85,8 +84,7 @@ export const totalCountVariants: {
                         className="md"
                         style={{
                             color: "#52C41A",
-                        }}
-                    />
+                        }} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
                 </IconWrapper>
             ),
     title: "Number of contacts",
@@ -126,8 +124,7 @@ export const totalCountVariants: {
                         className="md"
                         style={{
                             color: "#FA541C",
-                        }}
-                    />
+                        }} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
                 </IconWrapper>
             ),
     title: "Total deals in pipeline",

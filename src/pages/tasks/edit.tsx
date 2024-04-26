@@ -73,7 +73,7 @@ const TasksEditPage = () => {
             setActive={setActiveKey}
             fallback={<DescriptionHeader description={description} />}
             isLoading={isLoading}
-            icon={<AlignLeftOutlined />}
+            icon={<AlignLeftOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />}
             label="Description"
         >
             <DescriptionForm
@@ -88,7 +88,7 @@ const TasksEditPage = () => {
             setActive={setActiveKey}
             fallback={<DueDateHeader dueData={dueDate} />}
             isLoading={isLoading}
-            icon={<FieldTimeOutlined />}
+            icon={<FieldTimeOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />}
             label="Due date"
         >
             <DueDateForm
@@ -103,7 +103,7 @@ const TasksEditPage = () => {
             setActive={setActiveKey}
             fallback={<UsersHeader users={users} />}
             isLoading={isLoading}
-            icon={<UsergroupAddOutlined />}
+            icon={<UsergroupAddOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />}
             label="Users"
         >
             <UsersForm

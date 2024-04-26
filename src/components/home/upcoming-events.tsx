@@ -41,7 +41,7 @@ const UpcomingEvents = () => {
                     alignItems: 'center',
                     gap: '8px'
                 }}>
-                    <CalendarOutlined/>
+                    <CalendarOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}/>
                     <Text size="sm" style={{ marginLeft: '0.7rem' }}>
                         Upcoming Events
                     </Text>

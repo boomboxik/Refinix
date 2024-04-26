@@ -13,7 +13,8 @@ import { getNameInitials } from "@/utilities";
 
 import  CustomAvatar  from "../custom-avatar";
 import { Text } from "../text";
-import { UPDATE_USER_MUTATION } from "./queries";
+import { UPDATE_USER_MUTATION } from "@/graphql/mutations";
+
 
 type Props = {
   opened: boolean;
@@ -82,7 +83,7 @@ export const AccountSettings = ({ opened, setOpened, userId }: Props) => {
         <Text strong>Account Settings</Text>
         <Button
           type="text"
-          icon={<CloseOutlined />}
+          icon={<CloseOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />}
           onClick={() => closeModal()}
         />
       </div>

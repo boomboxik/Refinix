@@ -77,7 +77,7 @@ const { tableProps } = useTable<GetFieldsFromList<CompanyContactsTableQuery>>(
             bodyStyle={{ padding: 0 }}
             title={
                 <Space size="middle">
-                <TeamOutlined />
+                <TeamOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
                 <Text>Contacts</Text>
                 </Space>
             }
@@ -124,7 +124,7 @@ const { tableProps } = useTable<GetFieldsFromList<CompanyContactsTableQuery>>(
             <Table.Column
                 title="Title"
                 dataIndex="jobTitle"
-                filterIcon={<SearchOutlined />}
+                filterIcon={<SearchOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />}
                 filterDropdown={(props) => (
                     <FilterDropdown {...props}>
                         <Input placeholder="Search Title" />
@@ -154,12 +154,12 @@ const { tableProps } = useTable<GetFieldsFromList<CompanyContactsTableQuery>>(
                         <Button
                             size="small"
                             href={`mailto:${record.email}`}
-                            icon={<MailOutlined />}
+                            icon={<MailOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />}
                         />
                         <Button
                             size="small"
                             href={`tel:${record.phone}`}
-                            icon={<PhoneOutlined />}
+                            icon={<PhoneOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />}
                         />
                     </Space>
                 )}

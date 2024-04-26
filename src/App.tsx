@@ -1,6 +1,5 @@
 import { Authenticated, Refine } from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
-import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
 import { useNotificationProvider } from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
@@ -26,7 +25,6 @@ import EditTask from "./pages/tasks/edit";
 function App() {
   return (
     <BrowserRouter>
-      <RefineKbarProvider>
           <AntdApp>
             <DevtoolsProvider>
               <Refine
@@ -76,14 +74,12 @@ function App() {
                       </Route>
                   </Route>
                 </Routes>
-                <RefineKbar />
                 <UnsavedChangesNotifier />
                 <DocumentTitleHandler />
               </Refine>
               <DevtoolsPanel />
             </DevtoolsProvider>
           </AntdApp>
-      </RefineKbarProvider>
     </BrowserRouter>
   )
 }
